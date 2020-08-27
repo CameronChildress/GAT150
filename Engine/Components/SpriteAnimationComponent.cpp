@@ -45,7 +45,7 @@ namespace nc
         Vector2 cellSize = textureSize / Vector2{ m_numX, m_numY };
 
         m_rect.x = static_cast<int>((m_frame % m_numX) * cellSize.x);
-        m_rect.y = static_cast<int>((m_frame / m_numY) * cellSize.y);
+        m_rect.y = static_cast<int>((m_frame / m_numX) * cellSize.y);
 
         m_rect.w = static_cast<int>(cellSize.x);
         m_rect.h = static_cast<int>(cellSize.y);

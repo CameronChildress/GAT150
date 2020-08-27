@@ -11,6 +11,8 @@ namespace nc
 		virtual void Destroy() override;
 		virtual Object* Clone() override { return new PlayerComponent{ *this }; }
 
+		void CollisionEvent(GameObject* gameObject);
+
 		virtual void Update() override;
 
 	};

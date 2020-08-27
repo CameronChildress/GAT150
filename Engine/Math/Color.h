@@ -43,7 +43,6 @@ namespace nc
 		friend std::ostream& operator << (std::ostream& stream, Color& c);
 
 		SDL_Color Pack888() const;
-
 		operator SDL_Color() const { return Pack888(); }
 
 		static const Color white;
