@@ -23,6 +23,10 @@ namespace nc
 
         m_owner->m_transform.position = PhysicsSystem::WorldToScreen(m_body->GetPosition());
         m_owner->m_transform.angle = nc::RadiansToDegrees(m_body->GetAngle());
+
+        m_velocity = m_body->GetLinearVelocity();
+        m_velocity.x = nc::Clamp(m_velocity.x, -5.0f, 5.0f);
+        m_body->SetLinearVelocity(m_velocity);
     }
 
     void RigidBodyComponent::Read(const rapidjson::Value& value)
@@ -40,6 +44,5 @@ namespace nc
     {
         m_body->SetGravityScale(2.0f);
         m_body->ApplyForceToCenter(force, true);
-        m_body->SetLinearDamping(0.15f);
     }
 }

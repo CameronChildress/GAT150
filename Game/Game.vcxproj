@@ -145,6 +145,7 @@
   <ItemGroup>
     <ClCompile Include="Components\PlayerComponent.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="TileMap.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Engine\Engine.vcxproj">
@@ -153,6 +154,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Components\PlayerComponent.h" />
+    <ClInclude Include="TileMap.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\Build\scene.txt" />
+    <Text Include="..\Build\tileMap.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
